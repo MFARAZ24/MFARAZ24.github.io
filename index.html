@@ -1,124 +1,116 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>M. Faraz — PhD Student | Cybersecurity / ML</title>
-  <meta name="description" content="Portfolio of M. Faraz (MFARAZ24): projects, skills, and contact for internships/full-time roles." />
-  <link rel="stylesheet" href="assets/style.css" />
-</head>
-<body>
-  <header class="container hero">
-    <div class="hero__text">
-      <p class="eyebrow">Open to internships / full-time</p>
-      <h1>M. Faraz</h1>
-      <p class="subtitle">
-        PhD Student (ECE/CS) — Cybersecurity • Machine Learning • Systems
-      </p>
+<section id="about" class="section">
+  <h2>About</h2>
+  <p>
+    I’m Muhammad Faraz — a graduate researcher focused on applied machine learning and cybersecurity.
+    I build end-to-end projects (from data + experiments to documented results) and enjoy solving real problems with clean, reproducible code.
+  </p>
 
-      <div class="cta">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn" href="#contact">Contact</a>
-        <a class="btn ghost" href="assets/Faraz_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-      </div>
+  <div class="chips">
+    <span>Machine Learning</span>
+    <span>Cybersecurity</span>
+    <span>Feature Selection</span>
+    <span>NLP</span>
+    <span>Data Analytics</span>
+    <span>Python</span>
+    <span>C# / .NET</span>
+  </div>
 
-      <ul class="quickfacts">
-        <li>Based in Wichita, KS</li>
-        <li>Interests: security, ML, CI/static analysis, research</li>
-        <li>GitHub: <a href="https://github.com/MFARAZ24" target="_blank" rel="noopener">MFARAZ24</a></li>
-      </ul>
-    </div>
-  </header>
+  <p class="note">
+    Currently exploring Generative AI tooling and sharpening DSA for efficient problem solving.
+  </p>
+</section>
 
-  <main class="container">
-    <section id="about" class="section">
-      <h2>About</h2>
+<section id="projects" class="section">
+  <h2>Featured Projects</h2>
+  <p class="hint">
+    Each project includes a quick summary, tech stack, and links to code + deliverables.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <h3>Intrusion Detection (ML + Feature Selection)</h3>
+      <p class="meta">Logistic Regression • Linear SVM • Random Forest • Feature Selection</p>
       <p>
-        I’m a PhD student focused on building secure, reliable systems and applying ML to cybersecurity problems.
-        I like projects with clear problem statements, measurable outcomes, and well-documented code.
+        Evaluated how feature selection changes intrusion detection performance across NSL-KDD, UNSW-NB15, and CIC-IDS2017.
+        Compared RF feature importance and L1 regularization; tracked accuracy, precision, recall, F1, and training time.
       </p>
-
-      <div class="chips">
-        <span>Python</span><span>ML</span><span>Security</span><span>CI/CD</span><span>Static Analysis</span><span>Linux</span>
+      <div class="links">
+        <a href="REPO_INTRUSION" target="_blank" rel="noopener">Code</a>
+        <a href="REPO_INTRUSION_REPORT" target="_blank" rel="noopener">Report/Results</a>
       </div>
-    </section>
+    </article>
 
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <p class="hint">
-        Tip: Hiring managers skim fast — keep each card scannable: what it is, tech stack, and links. 
+    <article class="card">
+      <h3>SmartResearchAssistance (Web Research Assistant)</h3>
+      <p class="meta">ASP.NET Core • EF Core • SQL Server • PDF Extraction • TF‑IDF</p>
+      <p>
+        Web app to manage academic PDFs: authentication, upload, metadata + full-text extraction, and keyword analysis
+        to help organize and analyze research papers.
       </p>
-
-      <div class="grid">
-        <article class="card">
-          <h3>Project Title 1</h3>
-          <p class="meta">Python • PyTorch • Security</p>
-          <p>1–2 lines: what problem it solves + what you built + what result you achieved.</p>
-          <div class="links">
-            <a href="https://github.com/MFARAZ24" target="_blank" rel="noopener">Code</a>
-            <a href="#" target="_blank" rel="noopener">Demo</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Project Title 2</h3>
-          <p class="meta">CI • Testing • Automation</p>
-          <p>1–2 lines: focus on impact (speed, accuracy, reliability) and what you owned.</p>
-          <div class="links">
-            <a href="https://github.com/MFARAZ24" target="_blank" rel="noopener">Code</a>
-            <a href="#" target="_blank" rel="noopener">Write-up</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Research / Publication</h3>
-          <p class="meta">Paper • Poster • Dataset</p>
-          <p>Link to a PDF, poster, or repo. Add a 1-line summary of contribution.</p>
-          <div class="links">
-            <a href="#" target="_blank" rel="noopener">PDF</a>
-            <a href="#" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </article>
+      <div class="links">
+        <a href="REPO_SMARTRESEARCH" target="_blank" rel="noopener">Code</a>
+        <a href="REPO_SMARTRESEARCH_DEMO" target="_blank" rel="noopener">Demo/Screens</a>
       </div>
-    </section>
+    </article>
 
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="two-col">
-        <div>
-          <h3>Core</h3>
-          <ul>
-            <li>Python, data analysis, ML pipelines</li>
-            <li>Security fundamentals (web/app/system)</li>
-            <li>Experimentation, evaluation, reproducibility</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Tools</h3>
-          <ul>
-            <li>Git/GitHub, Linux</li>
-            <li>CI concepts (testing, automation)</li>
-            <li>Documentation: READMEs, reports, posters</li>
-          </ul>
-        </div>
+    <article class="card">
+      <h3>Sentiment Analysis (VADER vs RoBERTa)</h3>
+      <p class="meta">NLTK • VADER • RoBERTa • HuggingFace Transformers</p>
+      <p>
+        Sentiment analysis pipeline comparing lexicon-based VADER vs transformer-based RoBERTa and a Transformers pipeline.
+        Includes EDA and a lightweight evaluation workflow.
+      </p>
+      <div class="links">
+        <a href="REPO_SENTIMENT" target="_blank" rel="noopener">Code</a>
+        <a href="REPO_SENTIMENT_NOTEBOOK" target="_blank" rel="noopener">Notebook</a>
       </div>
-    </section>
+    </article>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>If you’re hiring or want to collaborate, I’d love to connect.</p>
-      <div class="contact">
-        <a class="btn primary" href="mailto:YOUR_EMAIL@domain.com">Email Me</a>
-        <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn ghost" href="https://github.com/MFARAZ24" target="_blank" rel="noopener">GitHub</a>
+    <article class="card">
+      <h3>Google Data Analytics Capstone (Cyclistic)</h3>
+      <p class="meta">Data Analysis • Jupyter Notebook • Business Insights</p>
+      <p>
+        Capstone case study analyzing differences between casual riders and annual members to support strategies
+        that increase annual memberships and revenue.
+      </p>
+      <div class="links">
+        <a href="REPO_CAPSTONE" target="_blank" rel="noopener">Code</a>
+        <a href="REPO_CAPSTONE_NOTEBOOK" target="_blank" rel="noopener">Notebook</a>
       </div>
-    </section>
+    </article>
 
-    <footer class="footer">
-      <small>© <span id="year"></span> M. Faraz • Built on GitHub Pages</small>
-    </footer>
-  </main>
+    <article class="card">
+      <h3>Library Management System</h3>
+      <p class="meta">Client/Server • Database • CRUD • UI Improvements</p>
+      <p>
+        Full-stack library workflow: manage books, users, and borrowing/return operations backed by a database,
+        with a client/server structure and UI-focused improvements.
+      </p>
+      <div class="links">
+        <a href="REPO_LIBRARY" target="_blank" rel="noopener">Code</a>
+      </div>
+    </article>
 
-  <script src="assets/script.js"></script>
-</body>
-</html>
+    <article class="card">
+      <h3>ATM System (Tkinter + MySQL)</h3>
+      <p class="meta">Python • Tkinter • MySQL • Transactions • Simple Prediction</p>
+      <p>
+        ATM simulation with PIN authentication, withdrawals, balance inquiry, and PIN updates with transaction logging.
+        Includes a simple ML-based “next transaction” prediction experiment.
+      </p>
+      <div class="links">
+        <a href="REPO_ATM" target="_blank" rel="noopener">Code</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Best way to reach me:</p>
+  <div class="contact">
+    <a href="EMAIL_LINK">Email</a>
+    <a href="LINKEDIN_LINK" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="GITHUB_PROFILE" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
