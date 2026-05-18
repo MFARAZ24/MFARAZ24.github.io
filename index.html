@@ -1,116 +1,251 @@
-<section id="about" class="section">
-  <h2>About</h2>
-  <p>
-    I’m Muhammad Faraz — a graduate researcher focused on applied machine learning and cybersecurity.
-    I build end-to-end projects (from data + experiments to documented results) and enjoy solving real problems with clean, reproducible code.
-  </p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Faraz — Portfolio</title>
+  <meta name="description" content="Muhammad Faraz — portfolio: machine learning, cybersecurity, NLP, and software projects." />
 
-  <div class="chips">
-    <span>Machine Learning</span>
-    <span>Cybersecurity</span>
-    <span>Feature Selection</span>
-    <span>NLP</span>
-    <span>Data Analytics</span>
-    <span>Python</span>
-    <span>C# / .NET</span>
-  </div>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#121b2f;
+      --text:#e8eefc;
+      --muted:#aab7d6;
+      --accent:#5eead4;
+      --accent2:#60a5fa;
+      --border: rgba(255,255,255,.08);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
 
-  <p class="note">
-    Currently exploring Generative AI tooling and sharpening DSA for efficient problem solving.
-  </p>
-</section>
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;padding:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial,sans-serif;
+      background:linear-gradient(180deg,#070b14, var(--bg));
+      color:var(--text)
+    }
+    a{color:inherit}
+    .container{max-width:980px;margin:0 auto;padding:28px}
 
-<section id="projects" class="section">
-  <h2>Featured Projects</h2>
-  <p class="hint">
-    Each project includes a quick summary, tech stack, and links to code + deliverables.
-  </p>
+    /* Hero */
+    .hero{padding-top:56px;padding-bottom:22px}
+    .eyebrow{color:var(--muted);margin:0 0 10px;font-size:14px}
+    h1{font-size:44px;letter-spacing:-.02em;margin:0 0 8px}
+    .subtitle{color:var(--muted);font-size:18px;line-height:1.5;margin:0 0 18px}
 
-  <div class="grid">
-    <article class="card">
-      <h3>Intrusion Detection (ML + Feature Selection)</h3>
-      <p class="meta">Logistic Regression • Linear SVM • Random Forest • Feature Selection</p>
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;border-radius:12px;border:1px solid var(--border);
+      text-decoration:none;background:transparent
+    }
+    .btn.primary{
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      color:#071018;border:none;font-weight:700
+    }
+    .btn.ghost{border-color:rgba(94,234,212,.35)}
+
+    .quickfacts{list-style:none;padding:0;margin:18px 0 0;color:var(--muted)}
+    .quickfacts li{margin:6px 0}
+
+    /* Sections */
+    .section{padding:28px 0;border-top:1px solid var(--border)}
+    .section h2{margin:0 0 10px;font-size:24px}
+    .hint{color:var(--muted);margin-top:0}
+    .note{color:var(--muted);margin-top:14px}
+
+    /* Chips */
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .chips span{
+      padding:6px 10px;border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      color:var(--muted);font-size:13px
+    }
+
+    /* Cards grid */
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .card{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      border-radius:16px;padding:14px;
+      box-shadow:var(--shadow)
+    }
+    .card h3{margin:0 0 8px}
+    .meta{color:var(--muted);margin:0 0 8px;font-size:13px}
+    .links{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+    .links a{
+      color:var(--accent);
+      text-decoration:none;
+      border-bottom:1px dashed rgba(94,234,212,.35)
+    }
+
+    /* Contact */
+    .contact{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
+    .contact a{
+      color:var(--accent);
+      text-decoration:none;
+      border-bottom:1px dashed rgba(94,234,212,.35)
+    }
+
+    /* Footer */
+    .footer{padding:18px 0;color:var(--muted)}
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:36px}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container hero">
+    <p class="eyebrow">Open to internships / full-time opportunities</p>
+    <h1>Muhammad Faraz</h1>
+    <p class="subtitle">
+      Graduate researcher focused on applied Machine Learning and Cybersecurity — building reproducible, end-to-end projects.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn ghost" href="#contact">Contact</a>
+      <a class="btn ghost" href="https://github.com/MFARAZ24" target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+    <ul class="quickfacts">
+      <li>Focus: ML, security, NLP, analytics, practical software</li>
+      <li>Currently: exploring Generative AI tools + sharpening DSA</li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <section id="about" class="section">
+      <h2>About</h2>
       <p>
-        Evaluated how feature selection changes intrusion detection performance across NSL-KDD, UNSW-NB15, and CIC-IDS2017.
-        Compared RF feature importance and L1 regularization; tracked accuracy, precision, recall, F1, and training time.
+        I’m Muhammad Faraz — a graduate researcher focused on applied machine learning and cybersecurity.
+        I build end-to-end projects (from data + experiments to documented results) and enjoy solving real problems with clean, reproducible code.
       </p>
-      <div class="links">
-        <a href="REPO_INTRUSION" target="_blank" rel="noopener">Code</a>
-        <a href="REPO_INTRUSION_REPORT" target="_blank" rel="noopener">Report/Results</a>
-      </div>
-    </article>
 
-    <article class="card">
-      <h3>SmartResearchAssistance (Web Research Assistant)</h3>
-      <p class="meta">ASP.NET Core • EF Core • SQL Server • PDF Extraction • TF‑IDF</p>
-      <p>
-        Web app to manage academic PDFs: authentication, upload, metadata + full-text extraction, and keyword analysis
-        to help organize and analyze research papers.
+      <div class="chips">
+        <span>Machine Learning</span>
+        <span>Cybersecurity</span>
+        <span>Feature Selection</span>
+        <span>NLP</span>
+        <span>Data Analytics</span>
+        <span>Python</span>
+        <span>C# / .NET</span>
+      </div>
+
+      <p class="note">
+        Currently exploring Generative AI tooling and sharpening DSA for efficient problem solving.
       </p>
-      <div class="links">
-        <a href="REPO_SMARTRESEARCH" target="_blank" rel="noopener">Code</a>
-        <a href="REPO_SMARTRESEARCH_DEMO" target="_blank" rel="noopener">Demo/Screens</a>
-      </div>
-    </article>
+    </section>
 
-    <article class="card">
-      <h3>Sentiment Analysis (VADER vs RoBERTa)</h3>
-      <p class="meta">NLTK • VADER • RoBERTa • HuggingFace Transformers</p>
-      <p>
-        Sentiment analysis pipeline comparing lexicon-based VADER vs transformer-based RoBERTa and a Transformers pipeline.
-        Includes EDA and a lightweight evaluation workflow.
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <p class="hint">
+        Each project includes a quick summary, tech stack, and links to code + deliverables.
       </p>
-      <div class="links">
-        <a href="REPO_SENTIMENT" target="_blank" rel="noopener">Code</a>
-        <a href="REPO_SENTIMENT_NOTEBOOK" target="_blank" rel="noopener">Notebook</a>
-      </div>
-    </article>
 
-    <article class="card">
-      <h3>Google Data Analytics Capstone (Cyclistic)</h3>
-      <p class="meta">Data Analysis • Jupyter Notebook • Business Insights</p>
-      <p>
-        Capstone case study analyzing differences between casual riders and annual members to support strategies
-        that increase annual memberships and revenue.
-      </p>
-      <div class="links">
-        <a href="REPO_CAPSTONE" target="_blank" rel="noopener">Code</a>
-        <a href="REPO_CAPSTONE_NOTEBOOK" target="_blank" rel="noopener">Notebook</a>
-      </div>
-    </article>
+      <div class="grid">
+        <article class="card">
+          <h3>Intrusion Detection (ML + Feature Selection)</h3>
+          <p class="meta">Logistic Regression • Linear SVM • Random Forest • Feature Selection</p>
+          <p>
+            Evaluated how feature selection changes intrusion detection performance across NSL-KDD, UNSW-NB15, and CIC-IDS2017.
+            Compared RF feature importance and L1 regularization; tracked accuracy, precision, recall, F1, and training time.
+          </p>
+          <div class="links">
+            <a href="https://github.com/MFARAZ24/Intrusion_Detection_Feature_Selection" target="_blank" rel="noopener">Code</a>
+            <a href="https://github.com/MFARAZ24/Intrusion_Detection_Feature_Selection/tree/main/results/figures" target="_blank" rel="noopener">Results</a>
+          </div>
+        </article>
 
-    <article class="card">
-      <h3>Library Management System</h3>
-      <p class="meta">Client/Server • Database • CRUD • UI Improvements</p>
-      <p>
-        Full-stack library workflow: manage books, users, and borrowing/return operations backed by a database,
-        with a client/server structure and UI-focused improvements.
-      </p>
-      <div class="links">
-        <a href="REPO_LIBRARY" target="_blank" rel="noopener">Code</a>
-      </div>
-    </article>
+        <article class="card">
+          <h3>SmartResearchAssistance (Web Research Assistant)</h3>
+          <p class="meta">ASP.NET Core • EF Core • SQL Server • PDF Extraction • TF‑IDF</p>
+          <p>
+            Web app to manage academic PDFs: authentication, upload, metadata + full-text extraction, and keyword analysis
+            to help organize and analyze research papers.
+          </p>
+          <div class="links">
+            <a href="https://github.com/MFARAZ24/SmartResearchAssistants" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
 
-    <article class="card">
-      <h3>ATM System (Tkinter + MySQL)</h3>
-      <p class="meta">Python • Tkinter • MySQL • Transactions • Simple Prediction</p>
-      <p>
-        ATM simulation with PIN authentication, withdrawals, balance inquiry, and PIN updates with transaction logging.
-        Includes a simple ML-based “next transaction” prediction experiment.
-      </p>
-      <div class="links">
-        <a href="REPO_ATM" target="_blank" rel="noopener">Code</a>
-      </div>
-    </article>
-  </div>
-</section>
+        <article class="card">
+          <h3>Sentiment Analysis (VADER vs RoBERTa)</h3>
+          <p class="meta">NLTK • VADER • RoBERTa • HuggingFace Transformers</p>
+          <p>
+            Sentiment analysis pipeline comparing lexicon-based VADER vs transformer-based RoBERTa and a Transformers pipeline.
+            Includes EDA and a lightweight evaluation workflow.
+          </p>
+          <div class="links">
+            <a href="https://github.com/MFARAZ24/Sentiment_Analysis" target="_blank" rel="noopener">Code</a>
+            <a href="https://github.com/MFARAZ24/Sentiment_Analysis/blob/main/Sentiment%20Analysis.ipynb" target="_blank" rel="noopener">Notebook</a>
+          </div>
+        </article>
 
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Best way to reach me:</p>
-  <div class="contact">
-    <a href="EMAIL_LINK">Email</a>
-    <a href="LINKEDIN_LINK" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="GITHUB_PROFILE" target="_blank" rel="noopener">GitHub</a>
-  </div>
-</section>
+        <article class="card">
+          <h3>Google Data Analytics Capstone (Cyclistic)</h3>
+          <p class="meta">Data Analysis • Jupyter Notebook • Business Insights</p>
+          <p>
+            Capstone case study analyzing differences between casual riders and annual members to support strategies
+            that increase annual memberships and revenue.
+          </p>
+          <div class="links">
+            <a href="https://github.com/MFARAZ24/Google-Data-Analytics-Capstone-Project" target="_blank" rel="noopener">Code</a>
+            <a href="https://github.com/MFARAZ24/Google-Data-Analytics-Capstone-Project/blob/master/my-cyclistic-project.ipynb" target="_blank" rel="noopener">Notebook</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Library Management System</h3>
+          <p class="meta">Client/Server • Database • CRUD • UI Improvements</p>
+          <p>
+            Full-stack library workflow: manage books, users, and borrowing/return operations backed by a database,
+            with a client/server structure and UI-focused improvements.
+          </p>
+          <div class="links">
+            <a href="https://github.com/MFARAZ24/Library-Management-System" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>ATM System (Tkinter + MySQL)</h3>
+          <p class="meta">Python • Tkinter • MySQL • Transactions • Simple Prediction</p>
+          <p>
+            ATM simulation with PIN authentication, withdrawals, balance inquiry, and PIN updates with transaction logging.
+            Includes a simple ML-based “next transaction” prediction experiment.
+          </p>
+          <div class="links">
+            <a href="https://github.com/MFARAZ24/Atm-Code" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Best way to reach me:</p>
+      <div class="contact">
+        <a href="mailto:farazshoaib23@gmail.com">Email</a>
+        <!-- Replace with your real LinkedIn URL -->
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/MFARAZ24" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>© <span id="year"></span> Muhammad Faraz</small>
+    </footer>
+  </main>
+
+  <script>
+    // Set current year in footer
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
